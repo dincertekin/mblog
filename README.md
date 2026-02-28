@@ -1,108 +1,81 @@
 # mblog
+A mobile blog app built with React Native and Express.js.
 
-Mobile blog application built using **React Native** for the client-side and **Express.js** with **MySQL** for the server-side. The UI design was sourced from a design on Figma, and the entire application was developed from scratch.
-
-## Features
-
-- **Blog Management:** Create, read, update, and delete blog posts.
-- **Responsive Design:** Optimized for mobile devices.
-- **Real-time Updates:** Posts and comments are updated in real-time.
+## Description
+mblog is a mobile blog application that lets you create, read, update, and delete blog posts from your phone. The client is built with React Native and communicates with an Express.js backend connected to a MySQL database. The UI is based on a Figma design and the entire application was developed from scratch.
 
 ## Screenshots
-
-| Home Screen                          | Post Details                         |
-|--------------------------------------|--------------------------------------|
+| Home Screen | Post Details |
+|---|---|
 | ![Home Screen](screenshots/screenshot_1.png) | ![Post Details](screenshots/screenshot_2.png) |
 
-## Technologies
+## Getting Started
 
-### Client-Side:
-- **React Native:** Framework for building native apps using React.
-- **Node-Fetch:** HTTP client for API requests.
+### Dependencies
+* Node.js and npm or yarn
+* MySQL database
+* React Native development environment ([setup guide](https://reactnative.dev/docs/environment-setup))
 
-### Server-Side:
-- **Express.js:** Fast and minimal Node.js web framework.
-- **MySQL:** Relational database for storing user data and blog content.
+### Installing
 
-## Installation
+* Clone the repository:
+```
+git clone https://github.com/dincertekin/mblog.git
+```
 
-### Prerequisites
+* Install client dependencies:
+```
+cd mblog/client
+npm install
+```
 
-- **Node.js** and **npm/yarn** installed.
-- **MySQL** database setup.
+* Install server dependencies:
+```
+cd mblog/server
+npm install
+```
 
-### Client-Side Setup
+* Configure MySQL by editing `app.js` in the `server` directory:
+```js
+host: 'your_mysql_host'
+user: 'your_mysql_user'
+password: 'your_mysql_password'
+database: 'your_database_name'
+```
 
-1. Clone the repository:
+### Executing program
 
-   ```bash
-   git clone https://github.com/dincertekin/mobile-blog.git
-   cd mobile-blog/client
-   ```
+* Start the server:
+```
+cd mblog/server
+npm run start
+```
 
-2. Install dependencies:
+* Start the client:
+```
+cd mblog/client
+npm run start
+```
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+* Open the app on your mobile device or emulator and start creating, editing, and reading blog posts.
 
-3. Start the development server:
+## Help
+Make sure your MySQL database is running before starting the server, otherwise the app will fail to connect.
 
-   ```bash
-   npm run start
-   # or
-   yarn start
-   ```
+## Contributing
+Contributions are welcome! To get started:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
-### Server-Side Setup
-
-1. Navigate to the server directory:
-
-   ```bash
-   cd mobile-blog/server
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Configure the MySQL by editing `app.js` file in the `server` directory:
-
-   ```js
-   host: 'your_mysql_host'
-   user: 'your_mysql_user'
-   password: 'your_mysql_password'
-   database: 'your_database_name'
-   ```
-
-4. Start the server:
-
-   ```bash
-   npm run start
-   # or
-   yarn start
-   ```
-
-## Usage
-
-1. Open the app on your mobile device (or emulator).
-2. Start creating, editing, and reading blog posts.
-
-## Contributions
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Please open an issue first for major changes to discuss what you'd like to change.
 
 ## License
+This project is licensed under the [MIT](LICENSE) License, see the LICENSE.md file for details
 
-This project is licensed under [MIT License](LICENSE).
-
-## Thanks
-
-- **Figma** for the UI design inspiration.
-- **Open-source libraries** and frameworks that made this project possible.
+## Acknowledgments
+* Figma UI design inspiration
+* [React Native](https://reactnative.dev)
+* [Express.js](https://expressjs.com)
